@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exempelutdrag — Basanalys Plus (Exempelbutik A)</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    :root { --bg:#0b1220; --text:#e8eefc; --muted:#a7b4d0; --border:#243049; --accent:#6ee7b7; --panel:#121a2b; }
+    body { margin:0; font-family:ui-sans-serif,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
+    .wrap { max-width:820px; margin:0 auto; padding:1.5rem 1.25rem 3rem; }
+    a { color:#93c5fd; }
+    h1 { font-size:1.5rem; }
+    h2 { font-size:1.15rem; margin-top:1.75rem; }
+    .muted { color:var(--muted); }
+    .box { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:1rem; margin:1rem 0; }
+    .warn { border-color:#7f1d1d; background:#2a1212; color:#fecaca; }
+    table { width:100%; border-collapse:collapse; font-size:.9rem; }
+    th, td { border-bottom:1px solid var(--border); padding:.4rem; text-align:left; vertical-align:top; }
+    code { font-size:.85em; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p><a href="../index.html">← Basanalys Plus</a></p>
+    <h1>Basanalys Plus — exempelutdrag (Exempelbutik A)</h1>
+    <p class="muted">Anonymiserat kort utdrag så ni ser formatet. Full rapport levereras privat till kund. Prisreferens 4&nbsp;990 SEK ex moms. Säljare Lars Örtegren AB · faktura efter bekräftad beställning.</p>
+
+    <div class="box warn" role="note">
+      <strong>Viktigt:</strong> Detta är <strong>inte</strong> juridisk rådgivning, <strong>inte</strong> en certifierad WCAG-revision
+      och <strong>inte</strong> ett intyg om överensstämmelse. Automatiserade kontroller fångar endast en delmängd av kraven.
+    </div>
+
+    <h2>Vad kunden får (sammanfattning)</h2>
+    <div class="box">
+      <p>För en fiktiv butik med densitet <strong>185</strong> automatiska fynd (34 critical / 21 serious / 126 moderate / 4 minor) skulle packen innehålla:</p>
+      <ol>
+        <li>Utkast till <strong>svensk tillgänglighetsredogörelse</strong></li>
+        <li><strong>Prioriterad åtgärdsplan</strong> (P0–P3) med praktiska noter för Shopify/Woo</li>
+        <li><strong>Checklista för dokumentation</strong> av arbetet</li>
+        <li>Tekniskt råunderlag som <em>bilaga</em> — inte huvudleveransen</li>
+      </ol>
+    </div>
+
+    <h2>Exempel: prioriterade åtgärder (utdrag)</h2>
+    <div class="box">
+      <table>
+        <thead><tr><th>Prio</th><th>Område</th><th>Kort åtgärd</th></tr></thead>
+        <tbody>
+          <tr><td>P0</td><td>Knappar utan tillgängligt namn</td><td>Ge ikonknappar synlig text, aria-label eller sr-only-text</td></tr>
+          <tr><td>P1</td><td>Otillräcklig färgkontrast</td><td>Justera text/bakgrund till minst 4.5:1 där det behövs</td></tr>
+          <tr><td>P2</td><td>Sidstruktur / landmärken</td><td>Tydlig main, header, nav; en H1 per vy</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Exempel: en åtgärd i full text</h2>
+    <div class="box">
+      <p><strong>[P0] Knappar utan tillgängligt namn</strong></p>
+      <ul>
+        <li><strong>Fynd:</strong> 34 ställen (automatiserat underlag).</li>
+        <li><strong>Åtgärd:</strong> Lägg aria-label, synlig text eller sr-only-text på ikonknappar (stäng, meny, favorit, varukorg).</li>
+        <li><strong>Shopify:</strong> Granska header/cart/wishlist i tema + appar.</li>
+        <li><strong>WooCommerce:</strong> Mini-cart, modal-stäng, quantity ±.</li>
+        <li><strong>Klart när:</strong> återkontroll ren <em>eller</em> dokumenterat undantag + manuell kontroll.</li>
+      </ul>
+    </div>
+
+    <p class="muted">Full kundrapport (HTML, utskrivbar till PDF) skickas privat efter beställning — den publiceras inte här.</p>
+    <p><a href="../index.html">Tillbaka till Basanalys Plus</a> · Kontakt <a href="mailto:basanalysplus@gmail.com">basanalysplus@gmail.com</a></p>
+  </div>
+</body>
+</html>

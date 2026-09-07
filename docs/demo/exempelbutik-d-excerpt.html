@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demopack D — Basanalys Plus (utdrag)</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    :root { --bg:#0b1220; --text:#e8eefc; --muted:#a7b4d0; --border:#243049; --accent:#6ee7b7; --panel:#121a2b; }
+    body { margin:0; font-family:ui-sans-serif,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
+    .wrap { max-width:820px; margin:0 auto; padding:1.5rem 1.25rem 3rem; }
+    a { color:#93c5fd; }
+    h1 { font-size:1.5rem; }
+    h2 { font-size:1.15rem; margin-top:1.75rem; }
+    .muted { color:var(--muted); }
+    .box { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:1rem; margin:1rem 0; }
+    .warn { border-color:#7f1d1d; background:#2a1212; color:#fecaca; }
+    table { width:100%; border-collapse:collapse; font-size:.9rem; }
+    th, td { border-bottom:1px solid var(--border); padding:.4rem; text-align:left; vertical-align:top; }
+    code { font-size:.85em; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p><a href="../index.html">← Basanalys Plus</a> · <a href="">Utdrag</a></p>
+    <h1>Basanalys Plus — Exempelbutik D (utdrag)</h1>
+    <p class="muted">Anonymiserad demo. Prisreferens 4&nbsp;990 SEK ex moms. Axe/WCAG-auto är <strong>input</strong>, inte produkten. Betalning: faktura efter bekräftad beställning.</p>
+
+    <div class="box warn" role="note">
+      <strong>Disclaimer:</strong> Detta är <strong>inte</strong> en certifierad WCAG-revision, <strong>inte</strong> juridisk rådgivning,
+      och <strong>inte</strong> ett intyg om överensstämmelse med LPTT/EAA. Automatiserade verktyg fångar endast en delmängd av WCAG.
+      Manuell testning krävs för verklig tillsynsberedskap. Inga “PTS-godkänd”-anspråk.
+    </div>
+
+    <h2>0. Executive summary</h2>
+    <div class="box">
+      <table>
+        <tr><th>Webbplats</th><td>Exempelbutik D</td></tr>
+        <tr><th>URL (placeholder)</th><td>https://www.exempelbutik.se/</td></tr>
+        <tr><th>Issue density</th><td><strong>35</strong></td></tr>
+        <tr><th>critical / serious / moderate / minor</th><td>13 / 15 / 7 / 0</td></tr>
+      </table>
+      <p class="muted" style="margin-bottom:0">Vad ni får som gratis Lighthouse/axe <em>inte</em> ger: (1) svensk redogörelse-utkast, (2) prioriterad remediering Shopify/Woo, (3) PTS-evidenschecklista.</p>
+    </div>
+
+    <h2>1. Kända brister (auto → redogörelse)</h2>
+    <div class="box">
+      <table>
+        <thead><tr><th>Prio</th><th>Regel</th><th>Impact</th><th>Noder</th><th>Kort åtgärd</th></tr></thead>
+        <tbody>
+          <tr><td>P0</td><td><code>link-name</code></td><td>serious</td><td>3</td><td>Unik länktext / aria-label</td></tr>
+          <tr><td>P2</td><td><code>aria-required-parent</code></td><td>critical</td><td>12</td><td>Korrekt ARIA-föräldraroll (menu/menubar/group)</td></tr>
+          <tr><td>P2</td><td><code>listitem</code></td><td>serious</td><td>12</td><td>li måste ligga i ul/ol (eller list-roll)</td></tr>
+          <tr><td>P2</td><td><code>region</code></td><td>moderate</td><td>4</td><td>Wrapa i &lt;main&gt;; använd header/nav/footer</td></tr>
+          <tr><td>P2</td><td><code>heading-order</code></td><td>moderate</td><td>2</td><td>Logisk H1→H2→H3</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>2. Remedieringsexempel (P0)</h2>
+    <div class="box">
+      <p><strong>[P0] Länkar utan begriplig text (<code>link-name</code>)</strong></p>
+      <ul>
+        <li><strong>Fynd:</strong> 3 noder, impact serious (automatiserat).</li>
+        <li><strong>Åtgärd:</strong> Unik länktext eller aria-label som beskriver målet. Undvik tomma &lt;a&gt; och generiska “läs mer” i bulk.</li>
+        <li><strong>Shopify:</strong> Banner-, social- och “shoppa nu”-länkar i sections.</li>
+        <li><strong>WooCommerce:</strong> Meny-ikoner, varumärkeslogotyper som länkar.</li>
+        <li><strong>DoD:</strong> återscan ren <em>eller</em> dokumenterat undantag + manuell QA.</li>
+      </ul>
+    </div>
+
+    <h2>3. Vad packen också innehåller</h2>
+    <ul class="muted">
+      <li>Full ifylld tillgänglighetsredogörelse-mall (sektioner 1–10, inkl. friskrivning)</li>
+      <li>Prioriterad remedieringslista för alla hittade regler + inbäddad Shopify/Woo-playbook</li>
+      <li>PTS/tillsyn evidenschecklista</li>
+    </ul>
+    <p><a href="">Öppna full demopack (Markdown)</a></p>
+  <p class="muted"><a href="../index.html">← Basanalys Plus</a> · <a href="mailto:basanalysplus@gmail.com">basanalysplus@gmail.com</a></p>
+</div>
+</body>
+</html>
